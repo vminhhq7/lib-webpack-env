@@ -1,21 +1,21 @@
 # request-env-webpack
 
 [Webpack](http://webpack.github.io/) (v1-5) plugin that allow you to request environment variables from an url by using [axios](https://github.com/axios/axios) requests
-before build (or after, or any other [event hook](https://webpack.js.org/api/compiler-hooks/)). 
+before build (or after, or any other [event hook](https://webpack.js.org/api/compiler-hooks/)).
 Can stop compilation by condition.
 
 ## Installation
 
 ```
-npm install --save-dev request-env-webpack
+npm install --save-dev lib-webpack-env
 ```
 
 ## Usage
 
 In config file:
 
-``` javascript
-const RequestEnvPlugin = require('request-env-webpack');
+```javascript
+const RequestEnvPlugin = require('lib-webpack-env');
 // ...
   module: {
     plugins: [
@@ -30,18 +30,19 @@ const RequestEnvPlugin = require('request-env-webpack');
   },
 // ...
 ```
+
 In js file:
 
-``` javascript
+```javascript
 // src/index.js
 // ...
-  console.log(process.env.APP_DATA) // output: "test"
+console.log(process.env.APP_DATA); // output: "test"
 // ...
 ```
 
 Read from json file:
 
-``` javascript
+```javascript
 const RequestEnvPlugin = require('request-env-webpack');
 // ...
   module: {
@@ -57,7 +58,7 @@ const RequestEnvPlugin = require('request-env-webpack');
 
 In json file:
 
-``` javascript
+```javascript
 // /home/user1/config.json
   {
     "data": {
@@ -70,15 +71,13 @@ In json file:
 
 In js file:
 
-``` javascript
+```javascript
 // src/index.js
 // ...
-  console.log(process.env.KEY1) // output: "this-is-value-01"
+console.log(process.env.KEY1); // output: "this-is-value-01"
 // ...
 ```
-
 
 You can find other axios's API options [here](https://github.com/axios/axios#axios-api)
 
 By default, environment variables will load from .env files, more informations [here](https://github.com/motdotla/dotenv#readme)
-
