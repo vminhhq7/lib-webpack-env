@@ -1,0 +1,31 @@
+{
+  "name": "@minhhq7/request-lib-env-webpack",
+  "version": "1.0.0",
+  "description": "Webpack plugin that allow you to request environment variables from an url by using axios requests before build (or after, or any other event hook). Can stop compilation by condition",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vminhhq7/lib-webpack-env"
+  },
+  "keywords": [
+    "webpack",
+    "conditional",
+    "request env",
+    "pre build"
+  ],
+  "author": "minhhq7",
+  "contributors": [],
+  "license": "MIT",
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "webpack": "^4.44.2",
+    "@craco/craco": "^6.0.0",
+    "systemjs-webpack-interop": "^2.3.5"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
